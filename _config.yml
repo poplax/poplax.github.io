@@ -81,8 +81,8 @@ comments: true
 # ------- Plugin ---------
 
 clean_css:
-	exclude:
-		- "*.min.css"
+  exclude:
+    - "*.min.css"
 
 # Sitemap
 sitemap:
