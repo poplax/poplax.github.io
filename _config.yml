@@ -127,7 +127,8 @@ qiniu:
   css:
     folder: css
 
-
-# 多说
-duoshuo_shortname: poplax
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
 

@@ -1,4 +1,4 @@
-title: Creator
+title: Hello Hexo+next
 date: 2015-11-09 17:55:34
 tags:
 - Creative
@@ -6,8 +6,6 @@ tags:
 category:
 - Nothing
 ---
-
-<!-- toc -->
 
 # 试用体验
 
