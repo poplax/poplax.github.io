@@ -29,7 +29,7 @@ Google官方Protobuf项目,官方文档
 第二个方法支持iOS,看这里
 
 Get the Scriptgit clone https://gist.github.com/9487468ae3375d0db0cc.git">
-<meta property="og:updated_time" content="2015-12-13T10:09:28.000Z">
+<meta property="og:updated_time" content="2015-12-13T12:07:25.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Use Protobuf (iOS)">
 <meta name="twitter:description" content="安装Protobuf两个方法安装:
@@ -81,7 +81,7 @@ Get the Scriptgit clone https://gist.github.com/9487468ae3375d0db0cc.git">
       
         <nav id="sub-nav">
           <div class="profile" id="profile-nav">
-            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="/css/images/avatar.png"><i class="fa fa-caret-down"></i></a>
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="/css/images/avatar.jpg"><i class="fa fa-caret-down"></i></a>
           </div>
         </nav>
       
@@ -121,7 +121,7 @@ Get the Scriptgit clone https://gist.github.com/9487468ae3375d0db0cc.git">
         <aside id="profile">
   <div class="inner profile-inner">
     <div class="base-info profile-block">
-      <img id="avatar" src="/css/images/avatar.png">
+      <img id="avatar" src="/css/images/avatar.jpg">
       <h2 id="name">poPLax</h2>
       <h3 id="title">Developer</h3>
       <span id="location"><i class="fa fa-map-marker"></i>BeiJing, China</span>
@@ -206,17 +206,17 @@ Get the Scriptgit clone https://gist.github.com/9487468ae3375d0db0cc.git">
 <li>第二个方法支持iOS,看<a href="https://gist.github.com/BennettSmith/9487468ae3375d0db0cc" target="_blank" rel="external">这里</a></li>
 </ul>
 <h3 id="Get_the_Script"><a href="#Get_the_Script" class="headerlink" title="Get the Script"></a>Get the Script</h3><p><code>git clone https://gist.github.com/9487468ae3375d0db0cc.git build-protobuf</code></p>
-<h3 id="Performing_the_Build"><a href="#Performing_the_Build" class="headerlink" title="Performing the Build"></a>Performing the Build</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cd build-protobuf&#10;$ ./build-protobuf.sh</span><br></pre></td></tr></table></figure>
+<h3 id="Performing_the_Build"><a href="#Performing_the_Build" class="headerlink" title="Performing the Build"></a>Performing the Build</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> build-protobuf</span><br><span class="line">$ ./build-protobuf.sh</span><br></pre></td></tr></table></figure>
 <p>Add <code>--interactive</code> to the above script if you would like the script to stop after each major operation. This makes it easier to inspect the output from the various steps for potential errors.</p>
 <p>Add <code>--master</code> if you would prefer to build from the master branch in the Google Protobuf git repo.</p>
 <h3 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h3><p>Build results are found in a folder called <code>protobuf-{version}</code>, where <code>{version}</code> will be either <code>2.6.1</code> or <code>master</code>. This folder contains <code>bin</code>, <code>include</code> and <code>lib</code> folders.</p>
 <h3 id="Integration_with_Xcode"><a href="#Integration_with_Xcode" class="headerlink" title="Integration with Xcode"></a>Integration with Xcode</h3><p>Create a build rule in your Xcode project with the following settings.</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#10;Process *Source files with names matching:* `*.proto`&#10;Using *Custom script:*&#10;&#10;cd $&#123;INPUT_FILE_DIR&#125;&#10;$&#123;SRCROOT&#125;/Google/protobuf/bin/protoc --proto_path=$&#123;INPUT_FILE_DIR&#125; $&#123;INPUT_FILE_PATH&#125; --cpp_out=$&#123;DERIVED_FILE_DIR&#125;&#10;&#10;Output Files&#10;$(DERIVED_FILE_DIR)/$(INPUT_FILE_BASE).pb.cc&#10;$(DERIVED_FILE_DIR)/$(INPUT_FILE_BASE).pb.h</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Process *Source files with names matching:* `*.proto`</span><br><span class="line">Using *Custom script:*</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> <span class="variable">$&#123;INPUT_FILE_DIR&#125;</span></span><br><span class="line"><span class="variable">$&#123;SRCROOT&#125;</span>/Google/protobuf/bin/protoc --proto_path=<span class="variable">$&#123;INPUT_FILE_DIR&#125;</span> <span class="variable">$&#123;INPUT_FILE_PATH&#125;</span> --cpp_out=<span class="variable">$&#123;DERIVED_FILE_DIR&#125;</span></span><br><span class="line"></span><br><span class="line">Output Files</span><br><span class="line">$(DERIVED_FILE_DIR)/$(INPUT_FILE_BASE).pb.cc</span><br><span class="line">$(DERIVED_FILE_DIR)/$(INPUT_FILE_BASE).pb.h</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://poplax.github.io/2015/11/30/protobuf-iOS/" data-id="cii4gvbip000cztzyfyp0bx9x" class="article-share-link">Share</a>
+      <a data-url="http://poplax.github.io/2015/11/30/protobuf-iOS/" data-id="cii4hmp4s000cekzy86j3i717" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C-C/">C/C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
